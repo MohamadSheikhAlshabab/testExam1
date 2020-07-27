@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>HOME</title>
+</head>
+
+<body>
+    <header>
+        <h1>HOME PAGE</h1>
+        <nav>
+            <a href="/">HOME</a>
+            <a href="/selectData">FAV</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="all">
+            <%data.forEach(val=>{%>
+            <div class="card">
+                <div>
+                    <img src="<%=val.img%>" alt="<%=val.name%>">
+                    <h3>Name : <%=val.name%></h3>
+                    <p>Level : <%=val.level%></p>
+                </div>
+                <div>
+                    <form action="/addToDb" method="GET">
+                        <input type="text" value="<%=val.name%>">
+                        <input type="text" value="<%=val.img%>">
+                        <input type="text" value="<%=val.level%>">
+                        <input type="submit" value="ADD TO DB">
+                    </form>
+                </div>
+            </div>
+            <%})%>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

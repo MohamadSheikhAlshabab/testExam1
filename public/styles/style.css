@@ -1,0 +1,12 @@
+.all{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    box-shadow: 10px 10px 10px 10px sienna;
+    background-color: tan;
+    margin: 10px;
+    text-align: center;
+}
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>FAVORITE</title>
+</head>
+
+<body>
+    <header>
+        <h1>FAVORITE PAGE</h1>
+        <nav>
+            <a href="/">HOME</a>
+            <a href="/selectData">FAV</a>
+        </nav>
+    </header>
+
+    <main>
+        <%console.log(val)%>
+        <div class="all">
+            <%val.forEach(data=>{%>
+            <div class="card">
+                <h2><%=data.id%></h2>
+                <img src="<%=data.img%>" alt="<%=data.name%>">
+                <h3>Name : <%=data.name%></h3>
+                <p>Level : <%=data.level%></p>
+            </div>
+            <%})%>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
